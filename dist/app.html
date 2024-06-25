@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script> 
+            async function fetchData() { 
+                // web3 URL is define in https://eips.ethereum.org/EIPS/eip-4804, please find more detail on https://web3url.io
+                const url = 'web3://0x8724A79Dc064F6a7D79aF3431dE387d4b2b41089:11155111/greeting'; 
+                const response = await fetch(url); 
+                const data = await response.text(); 
+                document.getElementById('content').textContent = data; 
+            } 
+            window.onload = fetchData; 
+        </script>
+    </head>
+    <body>
+        <div id="content"> Loading greeting... </div>
+        <br>
+        <img  src="./degen.jpeg"  alt="">	
+    </body>	
+</html>
